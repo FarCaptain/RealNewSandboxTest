@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>SkiingGame</title>
+	<title>all-of-us-web</title>
 	<style>
 		html,
 		body {
@@ -43,16 +43,16 @@
 <body>
 	<div id="gameContainer">
 		<canvas id="unity-canvas" data-pixel-art=""></canvas>
-		<script src="Build/SkiingGame.loader.js"></script>
+		<script src="Build/Build.loader.js"></script>
 		<script>
 			var canvas = document.querySelector("#unity-canvas");
 			var config = {
-				dataUrl: "Build/SkiingGame.data",
-				frameworkUrl: "Build/SkiingGame.framework.js",
-				codeUrl: "Build/SkiingGame.wasm",
+				dataUrl: "Build/Build.data.br",
+				frameworkUrl: "Build/Build.framework.js.br",
+				codeUrl: "Build/Build.wasm.br",
 				streamingAssetsUrl: "StreamingAssets",
-				companyName: "TheGAppLab",
-				productName: "SkiingGame",
+				companyName: "DefaultCompany",
+				productName: "all-of-us-web",
 				productVersion: "1.0",
 			};
 			var scaleToFit;
@@ -75,15 +75,15 @@
 					w = window.innerWidth;
 					h = window.innerHeight;
 
-					var r = 1920 / 1080;
+					var r = 1600 / 900;
 
 					if (w * r > window.innerHeight) {
 						w = Math.min(w, Math.ceil(h / r));
 					}
 					h = Math.floor(w * r);
 				} else {
-					w = 1080;
-					h = 1920;
+					w = 900;
+					h = 1600;
 				}
 
 				container.style.width = canvas.style.width = w + "px";
